@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.2.5.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.2, Version=21.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="BorgersCz" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="0, 0, 0, 0" PaperKind="Custom" PageWidth="2129" PageHeight="1450" Version="21.2" DataSource="#Ref-0" Dpi="254" Font="Arial, 9.75pt">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="TopMargin" HeightF="0" Dpi="254" />
+    <Item2 Ref="3" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="0" Dpi="254" />
+    <Item3 Ref="4" ControlType="DetailBand" Name="Detail" HeightF="1430.939" Dpi="254">
+      <HierarchyPrintOptions Ref="5" Indent="50.8" />
+      <Controls>
+        <Item1 Ref="6" ControlType="XRLine" Name="xrLine13" SizeF="1099.902,58.42017" LocationFloat="1001.098,1123.666" Dpi="254" />
+        <Item2 Ref="7" ControlType="XRLabel" Name="xrLabel34" Multiline="true" Text="Receiver" SizeF="265.838,27.75232" LocationFloat="1387.716,697.523" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="8" UseFont="false" />
+        </Item2>
+        <Item3 Ref="9" ControlType="XRLabel" Name="xrLabel33" Multiline="true" Text="Warenanhanger VDA 4902,  Version 4" SizeF="404.7443,27.75232" LocationFloat="1001.098,1390.815" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="10" UseFont="false" />
+        </Item3>
+        <Item4 Ref="11" ControlType="XRLabel" Name="xrLabel32" Multiline="true" Text="Batch Number" SizeF="265.838,27.75232" LocationFloat="1001.098,1315.288" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="12" UseFont="false" />
+        </Item4>
+        <Item5 Ref="13" ControlType="XRLabel" Name="xrLabel31" Multiline="true" Text="Revision Status" SizeF="265.838,27.75232" LocationFloat="1426.899,1168.028" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="14" UseFont="false" />
+        </Item5>
+        <Item6 Ref="15" ControlType="XRLabel" Name="xrLabel30" Multiline="true" Text="Date" SizeF="265.838,27.75232" LocationFloat="1001.098,1168.028" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="16" UseFont="false" />
+        </Item6>
+        <Item7 Ref="17" ControlType="XRLabel" Name="xrLabel29" Multiline="true" Text="Supplier Number" SizeF="265.838,27.75232" LocationFloat="1024.146,865.5507" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="18" UseFont="false" />
+        </Item7>
+        <Item8 Ref="19" ControlType="XRLabel" Name="xrLabel28" Multiline="true" Text="PES 6,7DTEX/57MM BLACK" SizeF="614.5549,58.41998" LocationFloat="1139.416,792.0999" Dpi="254" Font="Arial, 12pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="20" UseFont="false" />
+        </Item8>
+        <Item9 Ref="21" ControlType="XRLabel" Name="xrLabel27" Multiline="true" Text="Packaging Unit" SizeF="265.838,27.75232" LocationFloat="1715.318,303.4688" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="22" UseFont="false" />
+        </Item9>
+        <Item10 Ref="23" ControlType="XRLabel" Name="xrLabel26" Multiline="true" Text="Gross Weight (kg)" SizeF="265.838,27.75232" LocationFloat="1348.822,303.4688" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="24" UseFont="false" />
+        </Item10>
+        <Item11 Ref="25" ControlType="XRLabel" Name="xrLabel25" Multiline="true" Text="Oddział Elana w Toruniu" SizeF="701.1458,36.77225" LocationFloat="1213.379,254.9844" Dpi="254" Font="Arial, 9.75pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="26" UseFont="false" />
+        </Item11>
+        <Item12 Ref="27" ControlType="XRLabel" Name="xrLabel24" Multiline="true" Text="Boryszew S.A" SizeF="701.1458,36.77225" LocationFloat="1213.379,218.2122" Dpi="254" Font="Arial, 9.75pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="28" UseFont="false" />
+        </Item12>
+        <Item13 Ref="29" ControlType="XRLabel" Name="xrLabel23" Multiline="true" Text="Description" SizeF="265.838,27.75232" LocationFloat="1030.334,748.1118" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="30" UseFont="false" />
+        </Item13>
+        <Item14 Ref="31" ControlType="XRLabel" Name="xrLabel22" Multiline="true" Text="Net Weight (kg)" SizeF="265.838,27.75232" LocationFloat="1030.334,303.4688" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="32" UseFont="false" />
+        </Item14>
+        <Item15 Ref="33" ControlType="XRLabel" Name="xrLabel21" Multiline="true" Text="Supplier Address" SizeF="265.838,27.75232" LocationFloat="1030.334,210.4786" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="34" UseFont="false" />
+        </Item15>
+        <Item16 Ref="35" ControlType="XRLabel" Name="xrLabel20" Multiline="true" Text="Packaging Unit Number" SizeF="265.838,27.75232" LocationFloat="12.07476,1248.07" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="36" UseFont="false" />
+        </Item16>
+        <Item17 Ref="37" ControlType="XRLabel" Name="xrLabel19" Multiline="true" Text="Unloading Site" SizeF="265.838,27.75232" LocationFloat="1030.334,10.85684" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="38" UseFont="false" />
+        </Item17>
+        <Item18 Ref="39" ControlType="XRLabel" Name="xrLabel18" Multiline="true" Text="Quantity" SizeF="265.838,27.75232" LocationFloat="12.07476,759.5074" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="40" UseFont="false" />
+        </Item18>
+        <Item19 Ref="41" ControlType="XRLabel" Name="xrLabel17" Multiline="true" Text="Supplier Number" SizeF="265.838,27.75232" LocationFloat="0,1048.679" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="42" UseFont="false" />
+        </Item19>
+        <Item20 Ref="43" ControlType="XRLabel" Name="xrLabel16" Multiline="true" Text="Customer Reference Number" SizeF="585.142,27.75235" LocationFloat="12.07478,447.5452" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="44" UseFont="false" />
+        </Item20>
+        <Item21 Ref="45" ControlType="XRLabel" Name="xrLabel15" Multiline="true" Text="Delivery Note Number/ID ORDER NO." SizeF="498.0642,27.75232" LocationFloat="12.07478,210.4786" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="46" UseFont="false" />
+        </Item21>
+        <Item22 Ref="47" ControlType="XRLabel" Name="xrLabel14" Multiline="true" Text="Receiver" SizeF="265.838,27.75232" LocationFloat="12.07478,10.85684" Dpi="254" Font="Arial, 6pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="48" UseFont="false" />
+        </Item22>
+        <Item23 Ref="49" ControlType="XRLabel" Name="xrLabel13" Multiline="true" Text="WŁ.PES 6,7/57 CZARNE" SizeF="681.302,47.59619" LocationFloat="1139.416,904.6044" Dpi="254" Font="Arial, 9pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="50" UseFont="false" />
+        </Item23>
+        <Item24 Ref="51" ControlType="XRLabel" Name="xrLabel12" Multiline="true" Text="0008525" SizeF="309.6827,58.41998" LocationFloat="626.9423,557.462" Dpi="254" Font="Arial, 14.25pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="52" UseFont="false" />
+        </Item24>
+        <Item25 Ref="53" ControlType="XRLabel" Name="xrLabel11" Multiline="true" Text="D-46397 BOCHOLT" SizeF="701.1458,58.42" LocationFloat="1139.416,121.3909" Dpi="254" Font="Arial, 14.25pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="54" UseFont="false" />
+        </Item25>
+        <Item26 Ref="55" ControlType="XRLabel" Name="xrLabel10" Multiline="true" Text="BORGERSSTRASSE 2-20" SizeF="701.1458,58.42" LocationFloat="1139.416,62.97091" Dpi="254" Font="Arial, 14.25pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="56" UseFont="false" />
+        </Item26>
+        <Item27 Ref="57" ControlType="XRLabel" Name="xrLabel9" TextFormatString="{0:yyy-MM-dd}" Multiline="true" Text="xrLabel9" SizeF="254,58.42" LocationFloat="1024.146,1206.453" Dpi="254" Font="Arial, 12pt, charSet=238" Padding="5,5,0,0,254">
+          <ExpressionBindings>
+            <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="[DATE]" />
+          </ExpressionBindings>
+          <StylePriority Ref="59" UseFont="false" />
+        </Item27>
+        <Item28 Ref="60" ControlType="XRLabel" Name="xrLabel8" Multiline="true" Text="16679" SizeF="194.7333,58.42004" LocationFloat="643.9959,1123.666" Dpi="254" Font="Arial, 14.25pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="61" UseFont="false" />
+        </Item28>
+        <Item29 Ref="62" ControlType="XRBarCode" Name="xrBarCode4" TextFormatString="{0:004yyyy'-'MM'-'dd HH':'mm':'ss}" SizeF="940.9546,162.4693" LocationFloat="1030.334,964.6548" Dpi="254" Padding="26,26,0,0,254">
+          <Symbology Ref="63" Name="Code128" />
+          <ExpressionBindings>
+            <Item1 Ref="64" EventName="BeforePrint" PropertyName="Text" Expression="[DATE]" />
+          </ExpressionBindings>
+        </Item29>
+        <Item30 Ref="65" ControlType="XRBarCode" Name="xrBarCode3" Text="16679" SizeF="485.139,159.0111" LocationFloat="25.00001,1076.431" Dpi="254" Padding="26,26,0,0,254">
+          <Symbology Ref="66" Name="Code128" />
+          <ExpressionBindings>
+            <Item1 Ref="67" EventName="BeforePrint" PropertyName="Text" Expression="16679" />
+          </ExpressionBindings>
+        </Item30>
+        <Item31 Ref="68" ControlType="XRBarCode" Name="xrBarCode2" Module="3" Text="0008525" SizeF="567.6667,116.0078" LocationFloat="25,538.2504" Dpi="254" Padding="26,26,0,0,254">
+          <Symbology Ref="69" Name="Code128" />
+          <ExpressionBindings>
+            <Item1 Ref="70" EventName="BeforePrint" PropertyName="Text" Expression="0008525" />
+          </ExpressionBindings>
+        </Item31>
+        <Item32 Ref="71" ControlType="XRBarCode" Name="xrBarCode1" SizeF="508,116.0078" LocationFloat="25.00001,256.9261" Dpi="254" Padding="26,26,0,0,254">
+          <Symbology Ref="72" Name="Code128" />
+          <ExpressionBindings>
+            <Item1 Ref="73" EventName="BeforePrint" PropertyName="Text" Expression="[CODE_SERIES]" />
+          </ExpressionBindings>
+        </Item32>
+        <Item33 Ref="74" ControlType="XRLabel" Name="xrLabel7" Multiline="true" Text="JOHANN BORGERS GMBH" SizeF="701.1458,58.42" LocationFloat="76.72919,66.04002" Dpi="254" Font="Arial, 14.25pt, charSet=238" Padding="5,5,0,0,254">
+          <StylePriority Ref="75" UseFont="false" />
+        </Item33>
+        <Item34 Ref="76" ControlType="XRLabel" Name="xrLabel6" Multiline="true" Text="xrLabel6" SizeF="356.8267,58.42001" LocationFloat="606.858,272.8011" Dpi="254" Font="Arial, 15.75pt, charSet=238" Padding="5,5,0,0,254">
+          <ExpressionBindings>
+            <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="[CODE_SERIES]" />
+          </ExpressionBindings>
+          <StylePriority Ref="78" UseFont="false" />
+        </Item34>
+        <Item35 Ref="79" ControlType="XRLabel" Name="xrLabel5" Multiline="true" Text="xrLabel5" SizeF="254,58.42" LocationFloat="343.2167,1319.767" Dpi="254" Font="Arial, 14.25pt, charSet=238" Padding="5,5,0,0,254">
+          <ExpressionBindings>
+            <Item1 Ref="80" EventName="BeforePrint" PropertyName="Text" Expression="[licznik_wazen]" />
+          </ExpressionBindings>
+          <StylePriority Ref="81" UseFont="false" />
+        </Item35>
+        <Item36 Ref="82" ControlType="XRLabel" Name="xrLabel3" Multiline="true" Text="xrLabel3" SizeF="254,58.42" LocationFloat="1743.604,341.9218" Dpi="254" Padding="5,5,0,0,254">
+          <ExpressionBindings>
+            <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="[licznik_wazen]" />
+          </ExpressionBindings>
+        </Item36>
+        <Item37 Ref="84" ControlType="XRLabel" Name="xrLabel4" Multiline="true" Text="xrLabel2" SizeF="361.5073,86.6499" LocationFloat="313.4122,865.5507" Dpi="254" Font="Arial, 20.25pt, charSet=238" Padding="5,5,0,0,254">
+          <ExpressionBindings>
+            <Item1 Ref="85" EventName="BeforePrint" PropertyName="Text" Expression="[MASS_KG]" />
+          </ExpressionBindings>
+          <StylePriority Ref="86" UseFont="false" />
+        </Item37>
+        <Item38 Ref="87" ControlType="XRLabel" Name="xrLabel2" Multiline="true" Text="xrLabel2" SizeF="254,58.42" LocationFloat="1042.172,341.9218" Dpi="254" Padding="5,5,0,0,254">
+          <ExpressionBindings>
+            <Item1 Ref="88" EventName="BeforePrint" PropertyName="Text" Expression="[MASS_KG]" />
+          </ExpressionBindings>
+        </Item38>
+        <Item39 Ref="89" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="xrLabel1" SizeF="254,58.42" LocationFloat="1396.142,341.9218" Dpi="254" Padding="5,5,0,0,254">
+          <ExpressionBindings>
+            <Item1 Ref="90" EventName="BeforePrint" PropertyName="Text" Expression="[MASSBRUTTO]" />
+          </ExpressionBindings>
+        </Item39>
+        <Item40 Ref="91" ControlType="XRLine" Name="xrLine12" LineDirection="Vertical" SizeF="47.83325,146.1252" LocationFloat="1379.066,1152.02" Dpi="254" />
+        <Item41 Ref="92" ControlType="XRLine" Name="xrLine11" LineDirection="Vertical" SizeF="47.83313,162.8404" LocationFloat="1681.763,291.7567" Dpi="254" />
+        <Item42 Ref="93" ControlType="XRLine" Name="xrLine10" LineDirection="Vertical" SizeF="47.83325,149.9688" LocationFloat="1321.486,291.7567" Dpi="254" />
+        <Item43 Ref="94" ControlType="XRLine" Name="xrLine9" SizeF="1099.902,27.75232" LocationFloat="1001.098,1287.536" Dpi="254" />
+        <Item44 Ref="95" ControlType="XRLine" Name="xrLine8" SizeF="1099.902,58.41998" LocationFloat="1001.098,823.7924" Dpi="254" />
+        <Item45 Ref="96" ControlType="XRLine" Name="xrLine7" SizeF="1099.902,58.41998" LocationFloat="1001.098,272.8011" Dpi="254" />
+        <Item46 Ref="97" ControlType="XRLine" Name="xrLine6" LineDirection="Vertical" SizeF="47.83325,1418.567" LocationFloat="976.3125,0" Dpi="254" />
+        <Item47 Ref="98" ControlType="XRLine" Name="xrLine5" SizeF="1001.756,58.42004" LocationFloat="0,1218.036" Dpi="254" />
+        <Item48 Ref="99" ControlType="XRLine" Name="xrLine4" SizeF="1001.756,58.42004" LocationFloat="0,1018.011" Dpi="254" />
+        <Item49 Ref="100" ControlType="XRLine" Name="xrLine3" SizeF="2101,58.42004" LocationFloat="0,717.4441" Dpi="254" />
+        <Item50 Ref="101" ControlType="XRLine" Name="xrLine2" SizeF="2101,58.41998" LocationFloat="0,416.8776" Dpi="254" />
+        <Item51 Ref="102" ControlType="XRLine" Name="xrLine1" SizeF="2101,58.42001" LocationFloat="0,179.8109" Dpi="254" />
+      </Controls>
+    </Item3>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

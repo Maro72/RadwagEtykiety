@@ -1,0 +1,332 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8761CBF5-35FC-4292-8D91-E7266A6CEA52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RadwagE</RootNamespace>
+    <AssemblyName>RadwagE</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v24.1" />
+    <Reference Include="DevExpress.Charts.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v24.1" />
+    <Reference Include="DevExpress.DataAccess.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v24.1.UI, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.1" />
+    <Reference Include="DevExpress.Data.v24.1" />
+    <Reference Include="DevExpress.Images.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v24.1.Drawing, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v24.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Export, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v24.1" />
+    <Reference Include="DevExpress.Utils.v24.1.UI, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v24.1" />
+    <Reference Include="DevExpress.Sparkline.v24.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v24.1.Wizard, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.1" />
+    <Reference Include="DevExpress.XtraGauges.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v24.1.CodeCompletion, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBackupBazy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBackupBazy.Designer.cs">
+      <DependentUpon>FormBackupBazy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKonfiguracjaBazy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonfiguracjaBazy.Designer.cs">
+      <DependentUpon>FormKonfiguracjaBazy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRaportDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRaportDesigner.Designer.cs">
+      <DependentUpon>FormRaportDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportActionChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportActionChoice.Designer.cs">
+      <DependentUpon>frmReportActionChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klasy\Wazenia.cs" />
+    <Compile Include="Model\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RS_V_EW1_WAZENIA.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaportWybor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportWybor.Designer.cs">
+      <DependentUpon>RaportWybor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporty\Artec.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporty\Artec.Designer.cs">
+      <DependentUpon>Artec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporty\BorgersCz.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporty\BorgersCz.Designer.cs">
+      <DependentUpon>BorgersCz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporty\BorgersDE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporty\BorgersDE.Designer.cs">
+      <DependentUpon>BorgersDE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporty\BorgersZielone.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporty\BorgersZielone.Designer.cs">
+      <DependentUpon>BorgersZielone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporty\Borgres12.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporty\Borgres12.Designer.cs">
+      <DependentUpon>Borgres12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporty\RaportDostawy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporty\RaportDostawy.Designer.cs">
+      <DependentUpon>RaportDostawy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporty\Surowiec.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporty\Surowiec.Designer.cs">
+      <DependentUpon>Surowiec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uzytkownik.cs" />
+    <Compile Include="ZarzadzanieUzytkownikami.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBackupBazy.resx">
+      <DependentUpon>FormBackupBazy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKonfiguracjaBazy.resx">
+      <DependentUpon>FormKonfiguracjaBazy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRaportDesigner.resx">
+      <DependentUpon>FormRaportDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportActionChoice.resx">
+      <DependentUpon>frmReportActionChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RaportWybor.resx">
+      <DependentUpon>RaportWybor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporty\Artec.resx">
+      <DependentUpon>Artec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporty\BorgersCz.resx">
+      <DependentUpon>BorgersCz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporty\BorgersDE.resx">
+      <DependentUpon>BorgersDE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporty\BorgersZielone.resx">
+      <DependentUpon>BorgersZielone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporty\Borgres12.resx">
+      <DependentUpon>Borgres12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporty\RaportDostawy.resx">
+      <DependentUpon>RaportDostawy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporty\Surowiec.resx">
+      <DependentUpon>Surowiec.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <EntityDeploy Include="Model\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\RadwagE.Model.E2REntities.datasource" />
+    <None Include="Properties\DataSources\RadwagE.Model.ew1_kontrahenci.datasource" />
+    <None Include="Properties\DataSources\RadwagE.Model.RS_V_EW1_WAZENIA.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <None Include="Raporty\Raporty_edit\BorgersZielone.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Raporty\Raporty_edit\RaportDostawy.repx" />
+    <None Include="Raporty\Raporty_edit\Surowiec.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\printarea_16x16.png" />
+    <None Include="Resources\printarea_32x32.png" />
+    <None Include="Resources\defaultprinternetwork_16x161.png" />
+    <None Include="Resources\defaultprinternetwork_32x321.png" />
+    <None Include="Resources\defaultprinternetwork_16x16.png" />
+    <None Include="Resources\defaultprinternetwork_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ten projekt zawiera odwołania do pakietów NuGet, których nie ma na tym komputerze. Użyj przywracania pakietów NuGet, aby je pobrać. Aby uzyskać więcej informacji, zobacz http://go.microsoft.com/fwlink/?LinkID=322105. Brakujący plik: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

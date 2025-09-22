@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="E2RModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ew1_kontrahenci">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazwa" Type="varchar" MaxLength="500" />
+          <Property Name="nazwa_dl" Type="varchar" MaxLength="500" />
+          <Property Name="sKod" Type="varchar" MaxLength="500" />
+          <Property Name="opis" Type="varchar" MaxLength="250" />
+          <Property Name="dostawca" Type="bit" />
+          <Property Name="klijent" Type="bit" />
+          <Property Name="NIP" Type="varchar" MaxLength="30" />
+          <Property Name="rabat" Type="real" />
+          <Property Name="rabat_kwotowo" Type="bit" />
+          <Property Name="kod_etykiety" Type="varchar" MaxLength="50" />
+          <Property Name="impSymfonia" Type="text" />
+          <Property Name="impSubiekt" Type="text" />
+          <Property Name="zlecenie" Type="varchar" MaxLength="50" />
+          <Property Name="zlecenie_licznik" Type="int" />
+          <Property Name="impSub" Type="varchar" MaxLength="500" />
+          <Property Name="archiwalny" Type="bit" />
+          <Property Name="guid" Type="varchar" MaxLength="500" />
+          <Property Name="grupa" Type="int" />
+          <Property Name="kod_exp" Type="varchar" MaxLength="50" />
+          <Property Name="adres" Type="varchar" MaxLength="530" />
+          <Property Name="kod" Type="varchar" MaxLength="530" />
+          <Property Name="miejscowosc" Type="varchar" MaxLength="530" />
+          <Property Name="spedytor" Type="bit" />
+          <Property Name="data_aktualizacji" Type="datetime" />
+          <Property Name="IGNORE_TRIGGER" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'E2R.dbo.RS_V_EW1_WAZENIA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="RS_V_EW1_WAZENIA">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="DATE" />
+            <PropertyRef Name="MASS_SI" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" />
+          <Property Name="ID_TRANS" Type="bigint" />
+          <Property Name="DATE" Type="datetime" Nullable="false" />
+          <Property Name="ARTICLE_NAME" Type="nvarchar" MaxLength="500" />
+          <Property Name="BALANCE_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="MASS_ELEMENTARY" Type="real" />
+          <Property Name="ARTICLE NAME LONG" Type="nvarchar" MaxLength="500" />
+          <Property Name="UNIT" Type="varchar" MaxLength="10" />
+          <Property Name="COUNT" Type="int" />
+          <Property Name="OPERATOR" Type="varchar" MaxLength="100" />
+          <Property Name="COOPERATOR_NAME_LONG" Type="varchar" MaxLength="500" />
+          <Property Name="COOPERATOR" Type="varchar" MaxLength="500" />
+          <Property Name="SOURCE" Type="varchar" MaxLength="50" />
+          <Property Name="DESTINATION" Type="varchar" MaxLength="50" />
+          <Property Name="CODE_SERIES" Type="varchar" MaxLength="64" />
+          <Property Name="PRICE" Type="real" />
+          <Property Name="DISCOUNT" Type="smallint" />
+          <Property Name="EXTRA_FIELD_CBS" Type="varchar" MaxLength="50" />
+          <Property Name="PLATFORM_NUMBER" Type="int" />
+          <Property Name="EXTRA_FIELD_uboj_klasyfikacja" Type="varchar" MaxLength="50" />
+          <Property Name="EXTRA_FIELD_uboj_otluszczenie" Type="varchar" MaxLength="50" />
+          <Property Name="EXTRA_FIELD_uboj_tatuaz" Type="varchar" MaxLength="50" />
+          <Property Name="DATE_OF_GETTING" Type="datetime" />
+          <Property Name="TEMPERATURE" Type="real" />
+          <Property Name="DATE_OF_USABILITY" Type="datetime" />
+          <Property Name="MASS" Type="real" />
+          <Property Name="MASSBRUTTO" Type="real" />
+          <Property Name="MASSBRUTTO_ARTYS" Type="real" />
+          <Property Name="MASS_KG" Type="real" />
+          <Property Name="ID_ORDER" Type="int" />
+          <Property Name="MASS_SI" Type="real" Nullable="false" />
+          <Property Name="CODE_SERIE_TRANS" Type="varchar" MaxLength="20" />
+          <Property Name="MASS_FROM_HAND" Type="int" />
+          <Property Name="VALVE_COUNT" Type="int" />
+          <Property Name="MASS_TO_DOSE" Type="float" />
+          <Property Name="WEIGHT_NUMBER_FOR_GOODS" Type="bigint" />
+          <Property Name="WEIGHT_NUMBER_FOR_ORDER" Type="bigint" />
+          <Property Name="WEIGHT_NUMBER_IN_DAY" Type="bigint" />
+          <Property Name="ID_PALLETE" Type="int" />
+          <Property Name="LINE" Type="varchar" MaxLength="10" />
+          <Property Name="zlecenie_rec_szczegoly_id" Type="bigint" />
+          <Property Name="EXTRA_FIELD_uboj_skup_id_kontrah" Type="bigint" />
+          <Property Name="TARE" Type="real" />
+          <Property Name="NUMBER_IN_TRANSACTION" Type="int" />
+          <Property Name="id_brygada" Type="int" />
+          <Property Name="MAX_ARTICLE" Type="float" />
+          <Property Name="MIN_ARTICLE" Type="float" />
+          <Property Name="RECEPTURE_SERIES" Type="varchar" MaxLength="50" />
+          <Property Name="RECEPTURE_CODE" Type="varchar" MaxLength="50" />
+          <Property Name="EXTRA_FIELD_nr_kolczyk" Type="varchar" MaxLength="50" />
+          <Property Name="EXTRA_FIELD_cena_dnia2" Type="real" />
+          <Property Name="BOX" Type="smallint" />
+          <Property Name="PACKAGE_MASS" Type="real" />
+          <Property Name="PACKAGE_COUNT" Type="int" />
+          <Property Name="id_prac" Type="int" />
+          <Property Name="SCODE_ARTICLE" Type="varchar" MaxLength="500" />
+          <Property Name="SCODE_CONTRACTOR" Type="varchar" MaxLength="500" />
+          <Property Name="PACKAGE_SORT" Type="varchar" MaxLength="200" />
+          <Property Name="EXTRA_FIELD_uboj_klasa" Type="varchar" MaxLength="100" />
+          <Property Name="MASS_SI_ALWAYS_G" Type="real" />
+          <Property Name="ORDER_SYMBOL" Type="varchar" MaxLength="100" />
+          <Property Name="TRANS_SYMBOL" Type="varchar" MaxLength="100" />
+          <Property Name="PartiaOk" Type="int" />
+          <Property Name="Podzl_ew_symbol" Type="varchar" MaxLength="50" />
+          <Property Name="Zlecenie_ew_symbol" Type="varchar" MaxLength="50" />
+          <Property Name="scale_id" Type="bigint" />
+          <Property Name="NAZWA_TOWAR_WYNIK" Type="nvarchar" MaxLength="500" />
+          <Property Name="kod_serii2" Type="varchar" MaxLength="50" />
+          <Property Name="archiwalne" Type="bit" />
+          <Property Name="ZlecResztki" Type="bit" />
+          <Property Name="zlecenie_rec_id" Type="bigint" />
+          <Property Name="ZlecRecNr" Type="varchar" MaxLength="500" />
+          <Property Name="ZlecRecNazwa" Type="varchar" MaxLength="500" />
+          <Property Name="MasaZmierzonaNettoKg" Type="real" />
+          <Property Name="ubytekKG" Type="real" />
+          <Property Name="RecepturaNazwa" Type="varchar" MaxLength="500" />
+          <Property Name="wartosc_netto" Type="real" />
+          <Property Name="wartosc_brutto" Type="real" />
+          <Property Name="vat" Type="real" />
+          <Property Name="towar_ok" Type="bit" />
+          <Property Name="status_wazenia" Type="tinyint" />
+          <Property Name="Status_Kalibracji" Type="tinyint" />
+          <Property Name="Oper_id" Type="bigint" />
+          <Property Name="TypWagi" Type="varchar" MaxLength="100" />
+          <Property Name="MasaBruttoSI" Type="real" />
+          <Property Name="TareSI" Type="real" />
+          <Property Name="OperatorKontrolny" Type="varchar" MaxLength="100" />
+          <Property Name="Platforma_Nazwa" Type="varchar" MaxLength="50" />
+          <Property Name="Platforma_Numer" Type="int" />
+          <Property Name="TowarWynik" Type="nvarchar" MaxLength="500" />
+          <Property Name="uboj_miesnosc" Type="varchar" MaxLength="50" />
+          <Property Name="uboj_grubosc_miesnia" Type="varchar" MaxLength="50" />
+          <Property Name="uboj_nr_ubojowy" Type="varchar" MaxLength="50" />
+          <Property Name="uboj_klasa" Type="varchar" MaxLength="50" />
+          <Property Name="PrzychodRozchod" Type="bit" />
+          <Property Name="licznik_statystyka" Type="int" />
+          <Property Name="licznik_wazen" Type="int" />
+          <Property Name="SCODE_OPERATOR" Type="varchar" MaxLength="50" />
+          <Property Name="zm_uniw1" Type="varchar" MaxLength="256" />
+          <Property Name="zm_uniw2" Type="varchar" MaxLength="256" />
+          <Property Name="zm_uniw3" Type="varchar" MaxLength="256" />
+          <Property Name="ZmDod1" Type="varchar" MaxLength="256" />
+          <Property Name="ZmDod2" Type="varchar" MaxLength="256" />
+          <Property Name="ZmDod3" Type="varchar" MaxLength="256" />
+          <Property Name="ZmDod4" Type="varchar" MaxLength="256" />
+          <Property Name="ZmDod5" Type="varchar" MaxLength="256" />
+          <Property Name="masa_w_jednostce_str" Type="varchar" MaxLength="50" />
+          <Property Name="ktpw_t2_min" Type="float" />
+          <Property Name="ktpw_t2_max" Type="float" />
+          <Property Name="KTP_dokument_nr" Type="varchar" MaxLength="50" />
+          <Property Name="min" Type="float" />
+          <Property Name="max" Type="float" />
+          <Property Name="min2" Type="float" />
+          <Property Name="max2" Type="float" />
+          <Property Name="jedn_dod" Type="varchar" MaxLength="10" />
+          <Property Name="jedn_dod_ilosc" Type="real" />
+          <Property Name="PACKAGE_CODE" Type="varchar" MaxLength="50" />
+          <Property Name="MASS_IN_UNIT_ON_SCALE" Type="decimal" Precision="16" Scale="6" />
+          <Property Name="UNIT_ON_SCALE" Type="nchar" MaxLength="5" />
+          <Property Name="KTP_WEIGHTING_STATUS" Type="varchar" MaxLength="50" />
+          <Property Name="ARTICLE_CODE" Type="varchar" MaxLength="500" />
+          <Property Name="ARTICLE_QN" Type="real" />
+          <Property Name="ARTICLE_TARE" Type="float" />
+          <Property Name="ARTICLE_DENSITY" Type="float" />
+          <Property Name="Status_string" Type="varchar" MaxLength="3" />
+          <Property Name="OPERATOR2" Type="varchar" MaxLength="100" />
+          <Property Name="BRUTTO" Type="float" />
+        </EntityType>
+        <EntityContainer Name="E2RModelStoreContainer">
+          <EntitySet Name="ew1_kontrahenci" EntityType="Self.ew1_kontrahenci" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RS_V_EW1_WAZENIA" EntityType="Self.RS_V_EW1_WAZENIA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [RS_V_EW1_WAZENIA].[id] AS [id], 
+    [RS_V_EW1_WAZENIA].[ID_TRANS] AS [ID_TRANS], 
+    [RS_V_EW1_WAZENIA].[DATE] AS [DATE], 
+    [RS_V_EW1_WAZENIA].[ARTICLE_NAME] AS [ARTICLE_NAME], 
+    [RS_V_EW1_WAZENIA].[BALANCE_NAME] AS [BALANCE_NAME], 
+    [RS_V_EW1_WAZENIA].[MASS_ELEMENTARY] AS [MASS_ELEMENTARY], 
+    [RS_V_EW1_WAZENIA].[ARTICLE NAME LONG] AS [ARTICLE NAME LONG], 
+    [RS_V_EW1_WAZENIA].[UNIT] AS [UNIT], 
+    [RS_V_EW1_WAZENIA].[COUNT] AS [COUNT], 
+    [RS_V_EW1_WAZENIA].[OPERATOR] AS [OPERATOR], 
+    [RS_V_EW1_WAZENIA].[COOPERATOR_NAME_LONG] AS [COOPERATOR_NAME_LONG], 
+    [RS_V_EW1_WAZENIA].[COOPERATOR] AS [COOPERATOR], 
+    [RS_V_EW1_WAZENIA].[SOURCE] AS [SOURCE], 
+    [RS_V_EW1_WAZENIA].[DESTINATION] AS [DESTINATION], 
+    [RS_V_EW1_WAZENIA].[CODE_SERIES] AS [CODE_SERIES], 
+    [RS_V_EW1_WAZENIA].[PRICE] AS [PRICE], 
+    [RS_V_EW1_WAZENIA].[DISCOUNT] AS [DISCOUNT], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_CBS] AS [EXTRA_FIELD_CBS], 
+    [RS_V_EW1_WAZENIA].[PLATFORM_NUMBER] AS [PLATFORM_NUMBER], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_uboj_klasyfikacja] AS [EXTRA_FIELD_uboj_klasyfikacja], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_uboj_otluszczenie] AS [EXTRA_FIELD_uboj_otluszczenie], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_uboj_tatuaz] AS [EXTRA_FIELD_uboj_tatuaz], 
+    [RS_V_EW1_WAZENIA].[DATE_OF_GETTING] AS [DATE_OF_GETTING], 
+    [RS_V_EW1_WAZENIA].[TEMPERATURE] AS [TEMPERATURE], 
+    [RS_V_EW1_WAZENIA].[DATE_OF_USABILITY] AS [DATE_OF_USABILITY], 
+    [RS_V_EW1_WAZENIA].[MASS] AS [MASS], 
+    [RS_V_EW1_WAZENIA].[MASSBRUTTO] AS [MASSBRUTTO], 
+    [RS_V_EW1_WAZENIA].[MASSBRUTTO_ARTYS] AS [MASSBRUTTO_ARTYS], 
+    [RS_V_EW1_WAZENIA].[MASS_KG] AS [MASS_KG], 
+    [RS_V_EW1_WAZENIA].[ID_ORDER] AS [ID_ORDER], 
+    [RS_V_EW1_WAZENIA].[MASS_SI] AS [MASS_SI], 
+    [RS_V_EW1_WAZENIA].[CODE_SERIE_TRANS] AS [CODE_SERIE_TRANS], 
+    [RS_V_EW1_WAZENIA].[MASS_FROM_HAND] AS [MASS_FROM_HAND], 
+    [RS_V_EW1_WAZENIA].[VALVE_COUNT] AS [VALVE_COUNT], 
+    [RS_V_EW1_WAZENIA].[MASS_TO_DOSE] AS [MASS_TO_DOSE], 
+    [RS_V_EW1_WAZENIA].[WEIGHT_NUMBER_FOR_GOODS] AS [WEIGHT_NUMBER_FOR_GOODS], 
+    [RS_V_EW1_WAZENIA].[WEIGHT_NUMBER_FOR_ORDER] AS [WEIGHT_NUMBER_FOR_ORDER], 
+    [RS_V_EW1_WAZENIA].[WEIGHT_NUMBER_IN_DAY] AS [WEIGHT_NUMBER_IN_DAY], 
+    [RS_V_EW1_WAZENIA].[ID_PALLETE] AS [ID_PALLETE], 
+    [RS_V_EW1_WAZENIA].[LINE] AS [LINE], 
+    [RS_V_EW1_WAZENIA].[zlecenie_rec_szczegoly_id] AS [zlecenie_rec_szczegoly_id], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_uboj_skup_id_kontrah] AS [EXTRA_FIELD_uboj_skup_id_kontrah], 
+    [RS_V_EW1_WAZENIA].[TARE] AS [TARE], 
+    [RS_V_EW1_WAZENIA].[NUMBER_IN_TRANSACTION] AS [NUMBER_IN_TRANSACTION], 
+    [RS_V_EW1_WAZENIA].[id_brygada] AS [id_brygada], 
+    [RS_V_EW1_WAZENIA].[MAX_ARTICLE] AS [MAX_ARTICLE], 
+    [RS_V_EW1_WAZENIA].[MIN_ARTICLE] AS [MIN_ARTICLE], 
+    [RS_V_EW1_WAZENIA].[RECEPTURE_SERIES] AS [RECEPTURE_SERIES], 
+    [RS_V_EW1_WAZENIA].[RECEPTURE_CODE] AS [RECEPTURE_CODE], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_nr_kolczyk] AS [EXTRA_FIELD_nr_kolczyk], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_cena_dnia2] AS [EXTRA_FIELD_cena_dnia2], 
+    [RS_V_EW1_WAZENIA].[BOX] AS [BOX], 
+    [RS_V_EW1_WAZENIA].[PACKAGE_MASS] AS [PACKAGE_MASS], 
+    [RS_V_EW1_WAZENIA].[PACKAGE_COUNT] AS [PACKAGE_COUNT], 
+    [RS_V_EW1_WAZENIA].[id_prac] AS [id_prac], 
+    [RS_V_EW1_WAZENIA].[SCODE_ARTICLE] AS [SCODE_ARTICLE], 
+    [RS_V_EW1_WAZENIA].[SCODE_CONTRACTOR] AS [SCODE_CONTRACTOR], 
+    [RS_V_EW1_WAZENIA].[PACKAGE_SORT] AS [PACKAGE_SORT], 
+    [RS_V_EW1_WAZENIA].[EXTRA_FIELD_uboj_klasa] AS [EXTRA_FIELD_uboj_klasa], 
+    [RS_V_EW1_WAZENIA].[MASS_SI_ALWAYS_G] AS [MASS_SI_ALWAYS_G], 
+    [RS_V_EW1_WAZENIA].[ORDER_SYMBOL] AS [ORDER_SYMBOL], 
+    [RS_V_EW1_WAZENIA].[TRANS_SYMBOL] AS [TRANS_SYMBOL], 
+    [RS_V_EW1_WAZENIA].[PartiaOk] AS [PartiaOk], 
+    [RS_V_EW1_WAZENIA].[Podzl_ew_symbol] AS [Podzl_ew_symbol], 
+    [RS_V_EW1_WAZENIA].[Zlecenie_ew_symbol] AS [Zlecenie_ew_symbol], 
+    [RS_V_EW1_WAZENIA].[scale_id] AS [scale_id], 
+    [RS_V_EW1_WAZENIA].[NAZWA_TOWAR_WYNIK] AS [NAZWA_TOWAR_WYNIK], 
+    [RS_V_EW1_WAZENIA].[kod_serii2] AS [kod_serii2], 
+    [RS_V_EW1_WAZENIA].[archiwalne] AS [archiwalne], 
+    [RS_V_EW1_WAZENIA].[ZlecResztki] AS [ZlecResztki], 
+    [RS_V_EW1_WAZENIA].[zlecenie_rec_id] AS [zlecenie_rec_id], 
+    [RS_V_EW1_WAZENIA].[ZlecRecNr] AS [ZlecRecNr], 
+    [RS_V_EW1_WAZENIA].[ZlecRecNazwa] AS [ZlecRecNazwa], 
+    [RS_V_EW1_WAZENIA].[MasaZmierzonaNettoKg] AS [MasaZmierzonaNettoKg], 
+    [RS_V_EW1_WAZENIA].[ubytekKG] AS [ubytekKG], 
+    [RS_V_EW1_WAZENIA].[RecepturaNazwa] AS [RecepturaNazwa], 
+    [RS_V_EW1_WAZENIA].[wartosc_netto] AS [wartosc_netto], 
+    [RS_V_EW1_WAZENIA].[wartosc_brutto] AS [wartosc_brutto], 
+    [RS_V_EW1_WAZENIA].[vat] AS [vat], 
+    [RS_V_EW1_WAZENIA].[towar_ok] AS [towar_ok], 
+    [RS_V_EW1_WAZENIA].[status_wazenia] AS [status_wazenia], 
+    [RS_V_EW1_WAZENIA].[Status_Kalibracji] AS [Status_Kalibracji], 
+    [RS_V_EW1_WAZENIA].[Oper_id] AS [Oper_id], 
+    [RS_V_EW1_WAZENIA].[TypWagi] AS [TypWagi], 
+    [RS_V_EW1_WAZENIA].[MasaBruttoSI] AS [MasaBruttoSI], 
+    [RS_V_EW1_WAZENIA].[TareSI] AS [TareSI], 
+    [RS_V_EW1_WAZENIA].[OperatorKontrolny] AS [OperatorKontrolny], 
+    [RS_V_EW1_WAZENIA].[Platforma_Nazwa] AS [Platforma_Nazwa], 
+    [RS_V_EW1_WAZENIA].[Platforma_Numer] AS [Platforma_Numer], 
+    [RS_V_EW1_WAZENIA].[TowarWynik] AS [TowarWynik], 
+    [RS_V_EW1_WAZENIA].[uboj_miesnosc] AS [uboj_miesnosc], 
+    [RS_V_EW1_WAZENIA].[uboj_grubosc_miesnia] AS [uboj_grubosc_miesnia], 
+    [RS_V_EW1_WAZENIA].[uboj_nr_ubojowy] AS [uboj_nr_ubojowy], 
+    [RS_V_EW1_WAZENIA].[uboj_klasa] AS [uboj_klasa], 
+    [RS_V_EW1_WAZENIA].[PrzychodRozchod] AS [PrzychodRozchod], 
+    [RS_V_EW1_WAZENIA].[licznik_statystyka] AS [licznik_statystyka], 
+    [RS_V_EW1_WAZENIA].[licznik_wazen] AS [licznik_wazen], 
+    [RS_V_EW1_WAZENIA].[SCODE_OPERATOR] AS [SCODE_OPERATOR], 
+    [RS_V_EW1_WAZENIA].[zm_uniw1] AS [zm_uniw1], 
+    [RS_V_EW1_WAZENIA].[zm_uniw2] AS [zm_uniw2], 
+    [RS_V_EW1_WAZENIA].[zm_uniw3] AS [zm_uniw3], 
+    [RS_V_EW1_WAZENIA].[ZmDod1] AS [ZmDod1], 
+    [RS_V_EW1_WAZENIA].[ZmDod2] AS [ZmDod2], 
+    [RS_V_EW1_WAZENIA].[ZmDod3] AS [ZmDod3], 
+    [RS_V_EW1_WAZENIA].[ZmDod4] AS [ZmDod4], 
+    [RS_V_EW1_WAZENIA].[ZmDod5] AS [ZmDod5], 
+    [RS_V_EW1_WAZENIA].[masa_w_jednostce_str] AS [masa_w_jednostce_str], 
+    [RS_V_EW1_WAZENIA].[ktpw_t2_min] AS [ktpw_t2_min], 
+    [RS_V_EW1_WAZENIA].[ktpw_t2_max] AS [ktpw_t2_max], 
+    [RS_V_EW1_WAZENIA].[KTP_dokument_nr] AS [KTP_dokument_nr], 
+    [RS_V_EW1_WAZENIA].[min] AS [min], 
+    [RS_V_EW1_WAZENIA].[max] AS [max], 
+    [RS_V_EW1_WAZENIA].[min2] AS [min2], 
+    [RS_V_EW1_WAZENIA].[max2] AS [max2], 
+    [RS_V_EW1_WAZENIA].[jedn_dod] AS [jedn_dod], 
+    [RS_V_EW1_WAZENIA].[jedn_dod_ilosc] AS [jedn_dod_ilosc], 
+    [RS_V_EW1_WAZENIA].[PACKAGE_CODE] AS [PACKAGE_CODE], 
+    [RS_V_EW1_WAZENIA].[MASS_IN_UNIT_ON_SCALE] AS [MASS_IN_UNIT_ON_SCALE], 
+    [RS_V_EW1_WAZENIA].[UNIT_ON_SCALE] AS [UNIT_ON_SCALE], 
+    [RS_V_EW1_WAZENIA].[KTP_WEIGHTING_STATUS] AS [KTP_WEIGHTING_STATUS], 
+    [RS_V_EW1_WAZENIA].[ARTICLE_CODE] AS [ARTICLE_CODE], 
+    [RS_V_EW1_WAZENIA].[ARTICLE_QN] AS [ARTICLE_QN], 
+    [RS_V_EW1_WAZENIA].[ARTICLE_TARE] AS [ARTICLE_TARE], 
+    [RS_V_EW1_WAZENIA].[ARTICLE_DENSITY] AS [ARTICLE_DENSITY], 
+    [RS_V_EW1_WAZENIA].[Status_string] AS [Status_string], 
+    [RS_V_EW1_WAZENIA].[OPERATOR2] AS [OPERATOR2], 
+    [RS_V_EW1_WAZENIA].[BRUTTO] AS [BRUTTO]
+    FROM [dbo].[RS_V_EW1_WAZENIA] AS [RS_V_EW1_WAZENIA]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="E2RModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="RS_V_EW1_WAZENIA">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="DATE" />
+            <PropertyRef Name="MASS_SI" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="ID_TRANS" Type="Int64" />
+          <Property Name="DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ARTICLE_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BALANCE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MASS_ELEMENTARY" Type="Single" />
+          <Property Name="ARTICLE_NAME_LONG" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UNIT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="COUNT" Type="Int32" />
+          <Property Name="OPERATOR" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="COOPERATOR_NAME_LONG" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="COOPERATOR" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SOURCE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DESTINATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CODE_SERIES" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="PRICE" Type="Single" />
+          <Property Name="DISCOUNT" Type="Int16" />
+          <Property Name="EXTRA_FIELD_CBS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PLATFORM_NUMBER" Type="Int32" />
+          <Property Name="EXTRA_FIELD_uboj_klasyfikacja" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EXTRA_FIELD_uboj_otluszczenie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EXTRA_FIELD_uboj_tatuaz" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_OF_GETTING" Type="DateTime" Precision="3" />
+          <Property Name="TEMPERATURE" Type="Single" />
+          <Property Name="DATE_OF_USABILITY" Type="DateTime" Precision="3" />
+          <Property Name="MASS" Type="Single" />
+          <Property Name="MASSBRUTTO" Type="Single" />
+          <Property Name="MASSBRUTTO_ARTYS" Type="Single" />
+          <Property Name="MASS_KG" Type="Single" />
+          <Property Name="ID_ORDER" Type="Int32" />
+          <Property Name="MASS_SI" Type="Single" Nullable="false" />
+          <Property Name="CODE_SERIE_TRANS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MASS_FROM_HAND" Type="Int32" />
+          <Property Name="VALVE_COUNT" Type="Int32" />
+          <Property Name="MASS_TO_DOSE" Type="Double" />
+          <Property Name="WEIGHT_NUMBER_FOR_GOODS" Type="Int64" />
+          <Property Name="WEIGHT_NUMBER_FOR_ORDER" Type="Int64" />
+          <Property Name="WEIGHT_NUMBER_IN_DAY" Type="Int64" />
+          <Property Name="ID_PALLETE" Type="Int32" />
+          <Property Name="LINE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="zlecenie_rec_szczegoly_id" Type="Int64" />
+          <Property Name="EXTRA_FIELD_uboj_skup_id_kontrah" Type="Int64" />
+          <Property Name="TARE" Type="Single" />
+          <Property Name="NUMBER_IN_TRANSACTION" Type="Int32" />
+          <Property Name="id_brygada" Type="Int32" />
+          <Property Name="MAX_ARTICLE" Type="Double" />
+          <Property Name="MIN_ARTICLE" Type="Double" />
+          <Property Name="RECEPTURE_SERIES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RECEPTURE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EXTRA_FIELD_nr_kolczyk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EXTRA_FIELD_cena_dnia2" Type="Single" />
+          <Property Name="BOX" Type="Int16" />
+          <Property Name="PACKAGE_MASS" Type="Single" />
+          <Property Name="PACKAGE_COUNT" Type="Int32" />
+          <Property Name="id_prac" Type="Int32" />
+          <Property Name="SCODE_ARTICLE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SCODE_CONTRACTOR" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PACKAGE_SORT" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="EXTRA_FIELD_uboj_klasa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MASS_SI_ALWAYS_G" Type="Single" />
+          <Property Name="ORDER_SYMBOL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TRANS_SYMBOL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PartiaOk" Type="Int32" />
+          <Property Name="Podzl_ew_symbol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Zlecenie_ew_symbol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="scale_id" Type="Int64" />
+          <Property Name="NAZWA_TOWAR_WYNIK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="kod_serii2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="archiwalne" Type="Boolean" />
+          <Property Name="ZlecResztki" Type="Boolean" />
+          <Property Name="zlecenie_rec_id" Type="Int64" />
+          <Property Name="ZlecRecNr" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ZlecRecNazwa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MasaZmierzonaNettoKg" Type="Single" />
+          <Property Name="ubytekKG" Type="Single" />
+          <Property Name="RecepturaNazwa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="wartosc_netto" Type="Single" />
+          <Property Name="wartosc_brutto" Type="Single" />
+          <Property Name="vat" Type="Single" />
+          <Property Name="towar_ok" Type="Boolean" />
+          <Property Name="status_wazenia" Type="Byte" />
+          <Property Name="Status_Kalibracji" Type="Byte" />
+          <Property Name="Oper_id" Type="Int64" />
+          <Property Name="TypWagi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MasaBruttoSI" Type="Single" />
+          <Property Name="TareSI" Type="Single" />
+          <Property Name="OperatorKontrolny" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Platforma_Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Platforma_Numer" Type="Int32" />
+          <Property Name="TowarWynik" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="uboj_miesnosc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uboj_grubosc_miesnia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uboj_nr_ubojowy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uboj_klasa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PrzychodRozchod" Type="Boolean" />
+          <Property Name="licznik_statystyka" Type="Int32" />
+          <Property Name="licznik_wazen" Type="Int32" />
+          <Property Name="SCODE_OPERATOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="zm_uniw1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="zm_uniw2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="zm_uniw3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="ZmDod1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="ZmDod2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="ZmDod3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="ZmDod4" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="ZmDod5" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="masa_w_jednostce_str" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ktpw_t2_min" Type="Double" />
+          <Property Name="ktpw_t2_max" Type="Double" />
+          <Property Name="KTP_dokument_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="min" Type="Double" />
+          <Property Name="max" Type="Double" />
+          <Property Name="min2" Type="Double" />
+          <Property Name="max2" Type="Double" />
+          <Property Name="jedn_dod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="jedn_dod_ilosc" Type="Single" />
+          <Property Name="PACKAGE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MASS_IN_UNIT_ON_SCALE" Type="Decimal" Precision="16" Scale="6" />
+          <Property Name="UNIT_ON_SCALE" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="KTP_WEIGHTING_STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ARTICLE_CODE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ARTICLE_QN" Type="Single" />
+          <Property Name="ARTICLE_TARE" Type="Double" />
+          <Property Name="ARTICLE_DENSITY" Type="Double" />
+          <Property Name="Status_string" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATOR2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BRUTTO" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="E2REntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RS_V_EW1_WAZENIA" EntityType="Self.RS_V_EW1_WAZENIA" />
+          <EntitySet Name="ew1_kontrahenci" EntityType="E2RModel.ew1_kontrahenci" />
+        </EntityContainer>
+        <EntityType Name="ew1_kontrahenci">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazwa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="nazwa_dl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="sKod" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="opis" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="dostawca" Type="Boolean" />
+          <Property Name="klijent" Type="Boolean" />
+          <Property Name="NIP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="rabat" Type="Single" />
+          <Property Name="rabat_kwotowo" Type="Boolean" />
+          <Property Name="kod_etykiety" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="impSymfonia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="impSubiekt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="zlecenie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="zlecenie_licznik" Type="Int32" />
+          <Property Name="impSub" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="archiwalny" Type="Boolean" />
+          <Property Name="guid" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="grupa" Type="Int32" />
+          <Property Name="kod_exp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="adres" Type="String" MaxLength="530" FixedLength="false" Unicode="false" />
+          <Property Name="kod" Type="String" MaxLength="530" FixedLength="false" Unicode="false" />
+          <Property Name="miejscowosc" Type="String" MaxLength="530" FixedLength="false" Unicode="false" />
+          <Property Name="spedytor" Type="Boolean" />
+          <Property Name="data_aktualizacji" Type="DateTime" Precision="3" />
+          <Property Name="IGNORE_TRIGGER" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="E2RModelStoreContainer" CdmEntityContainer="E2REntities">
+          <EntitySetMapping Name="RS_V_EW1_WAZENIA">
+            <EntityTypeMapping TypeName="E2RModel.RS_V_EW1_WAZENIA">
+              <MappingFragment StoreEntitySet="RS_V_EW1_WAZENIA">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ID_TRANS" ColumnName="ID_TRANS" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="ARTICLE_NAME" ColumnName="ARTICLE_NAME" />
+                <ScalarProperty Name="BALANCE_NAME" ColumnName="BALANCE_NAME" />
+                <ScalarProperty Name="MASS_ELEMENTARY" ColumnName="MASS_ELEMENTARY" />
+                <ScalarProperty Name="ARTICLE_NAME_LONG" ColumnName="ARTICLE NAME LONG" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="COUNT" ColumnName="COUNT" />
+                <ScalarProperty Name="OPERATOR" ColumnName="OPERATOR" />
+                <ScalarProperty Name="COOPERATOR_NAME_LONG" ColumnName="COOPERATOR_NAME_LONG" />
+                <ScalarProperty Name="COOPERATOR" ColumnName="COOPERATOR" />
+                <ScalarProperty Name="SOURCE" ColumnName="SOURCE" />
+                <ScalarProperty Name="DESTINATION" ColumnName="DESTINATION" />
+                <ScalarProperty Name="CODE_SERIES" ColumnName="CODE_SERIES" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+                <ScalarProperty Name="EXTRA_FIELD_CBS" ColumnName="EXTRA_FIELD_CBS" />
+                <ScalarProperty Name="PLATFORM_NUMBER" ColumnName="PLATFORM_NUMBER" />
+                <ScalarProperty Name="EXTRA_FIELD_uboj_klasyfikacja" ColumnName="EXTRA_FIELD_uboj_klasyfikacja" />
+                <ScalarProperty Name="EXTRA_FIELD_uboj_otluszczenie" ColumnName="EXTRA_FIELD_uboj_otluszczenie" />
+                <ScalarProperty Name="EXTRA_FIELD_uboj_tatuaz" ColumnName="EXTRA_FIELD_uboj_tatuaz" />
+                <ScalarProperty Name="DATE_OF_GETTING" ColumnName="DATE_OF_GETTING" />
+                <ScalarProperty Name="TEMPERATURE" ColumnName="TEMPERATURE" />
+                <ScalarProperty Name="DATE_OF_USABILITY" ColumnName="DATE_OF_USABILITY" />
+                <ScalarProperty Name="MASS" ColumnName="MASS" />
+                <ScalarProperty Name="MASSBRUTTO" ColumnName="MASSBRUTTO" />
+                <ScalarProperty Name="MASSBRUTTO_ARTYS" ColumnName="MASSBRUTTO_ARTYS" />
+                <ScalarProperty Name="MASS_KG" ColumnName="MASS_KG" />
+                <ScalarProperty Name="ID_ORDER" ColumnName="ID_ORDER" />
+                <ScalarProperty Name="MASS_SI" ColumnName="MASS_SI" />
+                <ScalarProperty Name="CODE_SERIE_TRANS" ColumnName="CODE_SERIE_TRANS" />
+                <ScalarProperty Name="MASS_FROM_HAND" ColumnName="MASS_FROM_HAND" />
+                <ScalarProperty Name="VALVE_COUNT" ColumnName="VALVE_COUNT" />
+                <ScalarProperty Name="MASS_TO_DOSE" ColumnName="MASS_TO_DOSE" />
+                <ScalarProperty Name="WEIGHT_NUMBER_FOR_GOODS" ColumnName="WEIGHT_NUMBER_FOR_GOODS" />
+                <ScalarProperty Name="WEIGHT_NUMBER_FOR_ORDER" ColumnName="WEIGHT_NUMBER_FOR_ORDER" />
+                <ScalarProperty Name="WEIGHT_NUMBER_IN_DAY" ColumnName="WEIGHT_NUMBER_IN_DAY" />
+                <ScalarProperty Name="ID_PALLETE" ColumnName="ID_PALLETE" />
+                <ScalarProperty Name="LINE" ColumnName="LINE" />
+                <ScalarProperty Name="zlecenie_rec_szczegoly_id" ColumnName="zlecenie_rec_szczegoly_id" />
+                <ScalarProperty Name="EXTRA_FIELD_uboj_skup_id_kontrah" ColumnName="EXTRA_FIELD_uboj_skup_id_kontrah" />
+                <ScalarProperty Name="TARE" ColumnName="TARE" />
+                <ScalarProperty Name="NUMBER_IN_TRANSACTION" ColumnName="NUMBER_IN_TRANSACTION" />
+                <ScalarProperty Name="id_brygada" ColumnName="id_brygada" />
+                <ScalarProperty Name="MAX_ARTICLE" ColumnName="MAX_ARTICLE" />
+                <ScalarProperty Name="MIN_ARTICLE" ColumnName="MIN_ARTICLE" />
+                <ScalarProperty Name="RECEPTURE_SERIES" ColumnName="RECEPTURE_SERIES" />
+                <ScalarProperty Name="RECEPTURE_CODE" ColumnName="RECEPTURE_CODE" />
+                <ScalarProperty Name="EXTRA_FIELD_nr_kolczyk" ColumnName="EXTRA_FIELD_nr_kolczyk" />
+                <ScalarProperty Name="EXTRA_FIELD_cena_dnia2" ColumnName="EXTRA_FIELD_cena_dnia2" />
+                <ScalarProperty Name="BOX" ColumnName="BOX" />
+                <ScalarProperty Name="PACKAGE_MASS" ColumnName="PACKAGE_MASS" />
+                <ScalarProperty Name="PACKAGE_COUNT" ColumnName="PACKAGE_COUNT" />
+                <ScalarProperty Name="id_prac" ColumnName="id_prac" />
+                <ScalarProperty Name="SCODE_ARTICLE" ColumnName="SCODE_ARTICLE" />
+                <ScalarProperty Name="SCODE_CONTRACTOR" ColumnName="SCODE_CONTRACTOR" />
+                <ScalarProperty Name="PACKAGE_SORT" ColumnName="PACKAGE_SORT" />
+                <ScalarProperty Name="EXTRA_FIELD_uboj_klasa" ColumnName="EXTRA_FIELD_uboj_klasa" />
+                <ScalarProperty Name="MASS_SI_ALWAYS_G" ColumnName="MASS_SI_ALWAYS_G" />
+                <ScalarProperty Name="ORDER_SYMBOL" ColumnName="ORDER_SYMBOL" />
+                <ScalarProperty Name="TRANS_SYMBOL" ColumnName="TRANS_SYMBOL" />
+                <ScalarProperty Name="PartiaOk" ColumnName="PartiaOk" />
+                <ScalarProperty Name="Podzl_ew_symbol" ColumnName="Podzl_ew_symbol" />
+                <ScalarProperty Name="Zlecenie_ew_symbol" ColumnName="Zlecenie_ew_symbol" />
+                <ScalarProperty Name="scale_id" ColumnName="scale_id" />
+                <ScalarProperty Name="NAZWA_TOWAR_WYNIK" ColumnName="NAZWA_TOWAR_WYNIK" />
+                <ScalarProperty Name="kod_serii2" ColumnName="kod_serii2" />
+                <ScalarProperty Name="archiwalne" ColumnName="archiwalne" />
+                <ScalarProperty Name="ZlecResztki" ColumnName="ZlecResztki" />
+                <ScalarProperty Name="zlecenie_rec_id" ColumnName="zlecenie_rec_id" />
+                <ScalarProperty Name="ZlecRecNr" ColumnName="ZlecRecNr" />
+                <ScalarProperty Name="ZlecRecNazwa" ColumnName="ZlecRecNazwa" />
+                <ScalarProperty Name="MasaZmierzonaNettoKg" ColumnName="MasaZmierzonaNettoKg" />
+                <ScalarProperty Name="ubytekKG" ColumnName="ubytekKG" />
+                <ScalarProperty Name="RecepturaNazwa" ColumnName="RecepturaNazwa" />
+                <ScalarProperty Name="wartosc_netto" ColumnName="wartosc_netto" />
+                <ScalarProperty Name="wartosc_brutto" ColumnName="wartosc_brutto" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="towar_ok" ColumnName="towar_ok" />
+                <ScalarProperty Name="status_wazenia" ColumnName="status_wazenia" />
+                <ScalarProperty Name="Status_Kalibracji" ColumnName="Status_Kalibracji" />
+                <ScalarProperty Name="Oper_id" ColumnName="Oper_id" />
+                <ScalarProperty Name="TypWagi" ColumnName="TypWagi" />
+                <ScalarProperty Name="MasaBruttoSI" ColumnName="MasaBruttoSI" />
+                <ScalarProperty Name="TareSI" ColumnName="TareSI" />
+                <ScalarProperty Name="OperatorKontrolny" ColumnName="OperatorKontrolny" />
+                <ScalarProperty Name="Platforma_Nazwa" ColumnName="Platforma_Nazwa" />
+                <ScalarProperty Name="Platforma_Numer" ColumnName="Platforma_Numer" />
+                <ScalarProperty Name="TowarWynik" ColumnName="TowarWynik" />
+                <ScalarProperty Name="uboj_miesnosc" ColumnName="uboj_miesnosc" />
+                <ScalarProperty Name="uboj_grubosc_miesnia" ColumnName="uboj_grubosc_miesnia" />
+                <ScalarProperty Name="uboj_nr_ubojowy" ColumnName="uboj_nr_ubojowy" />
+                <ScalarProperty Name="uboj_klasa" ColumnName="uboj_klasa" />
+                <ScalarProperty Name="PrzychodRozchod" ColumnName="PrzychodRozchod" />
+                <ScalarProperty Name="licznik_statystyka" ColumnName="licznik_statystyka" />
+                <ScalarProperty Name="licznik_wazen" ColumnName="licznik_wazen" />
+                <ScalarProperty Name="SCODE_OPERATOR" ColumnName="SCODE_OPERATOR" />
+                <ScalarProperty Name="zm_uniw1" ColumnName="zm_uniw1" />
+                <ScalarProperty Name="zm_uniw2" ColumnName="zm_uniw2" />
+                <ScalarProperty Name="zm_uniw3" ColumnName="zm_uniw3" />
+                <ScalarProperty Name="ZmDod1" ColumnName="ZmDod1" />
+                <ScalarProperty Name="ZmDod2" ColumnName="ZmDod2" />
+                <ScalarProperty Name="ZmDod3" ColumnName="ZmDod3" />
+                <ScalarProperty Name="ZmDod4" ColumnName="ZmDod4" />
+                <ScalarProperty Name="ZmDod5" ColumnName="ZmDod5" />
+                <ScalarProperty Name="masa_w_jednostce_str" ColumnName="masa_w_jednostce_str" />
+                <ScalarProperty Name="ktpw_t2_min" ColumnName="ktpw_t2_min" />
+                <ScalarProperty Name="ktpw_t2_max" ColumnName="ktpw_t2_max" />
+                <ScalarProperty Name="KTP_dokument_nr" ColumnName="KTP_dokument_nr" />
+                <ScalarProperty Name="min" ColumnName="min" />
+                <ScalarProperty Name="max" ColumnName="max" />
+                <ScalarProperty Name="min2" ColumnName="min2" />
+                <ScalarProperty Name="max2" ColumnName="max2" />
+                <ScalarProperty Name="jedn_dod" ColumnName="jedn_dod" />
+                <ScalarProperty Name="jedn_dod_ilosc" ColumnName="jedn_dod_ilosc" />
+                <ScalarProperty Name="PACKAGE_CODE" ColumnName="PACKAGE_CODE" />
+                <ScalarProperty Name="MASS_IN_UNIT_ON_SCALE" ColumnName="MASS_IN_UNIT_ON_SCALE" />
+                <ScalarProperty Name="UNIT_ON_SCALE" ColumnName="UNIT_ON_SCALE" />
+                <ScalarProperty Name="KTP_WEIGHTING_STATUS" ColumnName="KTP_WEIGHTING_STATUS" />
+                <ScalarProperty Name="ARTICLE_CODE" ColumnName="ARTICLE_CODE" />
+                <ScalarProperty Name="ARTICLE_QN" ColumnName="ARTICLE_QN" />
+                <ScalarProperty Name="ARTICLE_TARE" ColumnName="ARTICLE_TARE" />
+                <ScalarProperty Name="ARTICLE_DENSITY" ColumnName="ARTICLE_DENSITY" />
+                <ScalarProperty Name="Status_string" ColumnName="Status_string" />
+                <ScalarProperty Name="OPERATOR2" ColumnName="OPERATOR2" />
+                <ScalarProperty Name="BRUTTO" ColumnName="BRUTTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ew1_kontrahenci">
+            <EntityTypeMapping TypeName="E2RModel.ew1_kontrahenci">
+              <MappingFragment StoreEntitySet="ew1_kontrahenci">
+                <ScalarProperty Name="IGNORE_TRIGGER" ColumnName="IGNORE_TRIGGER" />
+                <ScalarProperty Name="data_aktualizacji" ColumnName="data_aktualizacji" />
+                <ScalarProperty Name="spedytor" ColumnName="spedytor" />
+                <ScalarProperty Name="miejscowosc" ColumnName="miejscowosc" />
+                <ScalarProperty Name="kod" ColumnName="kod" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="kod_exp" ColumnName="kod_exp" />
+                <ScalarProperty Name="grupa" ColumnName="grupa" />
+                <ScalarProperty Name="guid" ColumnName="guid" />
+                <ScalarProperty Name="archiwalny" ColumnName="archiwalny" />
+                <ScalarProperty Name="impSub" ColumnName="impSub" />
+                <ScalarProperty Name="zlecenie_licznik" ColumnName="zlecenie_licznik" />
+                <ScalarProperty Name="zlecenie" ColumnName="zlecenie" />
+                <ScalarProperty Name="impSubiekt" ColumnName="impSubiekt" />
+                <ScalarProperty Name="impSymfonia" ColumnName="impSymfonia" />
+                <ScalarProperty Name="kod_etykiety" ColumnName="kod_etykiety" />
+                <ScalarProperty Name="rabat_kwotowo" ColumnName="rabat_kwotowo" />
+                <ScalarProperty Name="rabat" ColumnName="rabat" />
+                <ScalarProperty Name="NIP" ColumnName="NIP" />
+                <ScalarProperty Name="klijent" ColumnName="klijent" />
+                <ScalarProperty Name="dostawca" ColumnName="dostawca" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="sKod" ColumnName="sKod" />
+                <ScalarProperty Name="nazwa_dl" ColumnName="nazwa_dl" />
+                <ScalarProperty Name="nazwa" ColumnName="nazwa" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.1.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="RaportDostawy" Margins="8, 10, 129.25, 123.9583" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="24.1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="TopMargin" HeightF="129.25">
+      <Controls>
+        <Item1 Ref="3" ControlType="XRLabel" Name="xrLabel21" Multiline="true" Text="Nr Baga" TextAlignment="TopLeft" SizeF="99.99997,23" LocationFloat="699,106.25" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+          <StylePriority Ref="4" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="5" ControlType="XRLabel" Name="xrLabel20" Multiline="true" Text="Nr ważenia" TextAlignment="TopLeft" SizeF="99.99997,23" LocationFloat="599.0001,106.25" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+          <StylePriority Ref="6" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="7" ControlType="XRLabel" Name="xrLabel19" Multiline="true" Text="Brutto[ Kg ]" TextAlignment="TopLeft" SizeF="99.99997,23" LocationFloat="499,106.25" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+          <StylePriority Ref="8" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="9" ControlType="XRLabel" Name="xrLabel18" Multiline="true" Text="Tara [ Kg ]" TextAlignment="TopLeft" SizeF="100.0001,23" LocationFloat="399,106.25" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+          <StylePriority Ref="10" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="11" ControlType="XRLabel" Name="xrLabel17" Multiline="true" Text="Netto [ Kg ]" TextAlignment="TopLeft" SizeF="100,23" LocationFloat="299,106.25" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+          <StylePriority Ref="12" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="13" ControlType="XRLabel" Name="xrLabel16" Multiline="true" Text="Nazwa surowca" TextAlignment="TopLeft" SizeF="235.4583,23" LocationFloat="63.54166,106.25" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+          <StylePriority Ref="14" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="15" ControlType="XRLabel" Name="xrLabel15" Multiline="true" Text="ID" TextAlignment="TopCenter" SizeF="63.54165,23" LocationFloat="0,106.25" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom">
+          <StylePriority Ref="16" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="17" ControlType="XRLabel" Name="xrLabel14" Multiline="true" Text="Nr Dostawy" SizeF="139.5834,23" LocationFloat="9.999967,56.00001" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="18" UseFont="false" />
+        </Item8>
+        <Item9 Ref="19" ControlType="XRLabel" Name="xrLabel13" Multiline="true" Text="Dostawca" SizeF="152.9998,23" LocationFloat="499,47.50001" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="20" UseFont="false" />
+        </Item9>
+        <Item10 Ref="21" ControlType="XRLabel" Name="xrLabel12" Multiline="true" Text="RAPORT WAŻEŃ" TextAlignment="TopCenter" SizeF="265.7501,33.95834" LocationFloat="233.25,0" Font="Arial, 12pt, style=Bold, Underline" ForeColor="Blue" Padding="2,2,0,0,100">
+          <StylePriority Ref="22" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="23" ControlType="XRLabel" Name="xrLabel11" Multiline="true" Text="Data Ważenia" SizeF="139.5834,23" LocationFloat="9.999967,10.00001" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="24" UseFont="false" />
+        </Item11>
+        <Item12 Ref="25" ControlType="XRLabel" Name="xrLabel8" Multiline="true" Text="xrLabel8" SizeF="300.0001,23" LocationFloat="499,70.50001" Font="Arial, 12pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[COOPERATOR]" />
+          </ExpressionBindings>
+          <StylePriority Ref="27" UseFont="false" />
+        </Item12>
+        <Item13 Ref="28" ControlType="XRLabel" Name="xrLabel4" TextFormatString="{0:d}" Multiline="true" Text="xrLabel4" SizeF="139.5833,23" LocationFloat="9.999998,33.00001" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="29" EventName="BeforePrint" PropertyName="Text" Expression="[DATE]" />
+          </ExpressionBindings>
+        </Item13>
+        <Item14 Ref="30" ControlType="XRLabel" Name="xrLabel3" Multiline="true" Text="xrLabel3" SizeF="100,23" LocationFloat="9.999967,79.00003" Font="Arial, 12pt, style=Bold" ForeColor="Blue" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[CODE_SERIES]" />
+          </ExpressionBindings>
+          <StylePriority Ref="32" UseFont="false" UseForeColor="false" />
+        </Item14>
+      </Controls>
+    </Item1>
+    <Item2 Ref="33" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="123.9583" Borders="None">
+      <Controls>
+        <Item1 Ref="34" ControlType="XRLabel" Name="xrLabel29" Multiline="true" Text="xrLabel5" TextAlignment="TopLeft" SizeF="161.4583,23" LocationFloat="200.9167,77.33332" Font="Arial, 12pt, style=Bold" Padding="2,2,0,0,100" Borders="None">
+          <Summary Ref="35" Running="Report" />
+          <ExpressionBindings>
+            <Item1 Ref="36" EventName="BeforePrint" PropertyName="Text" Expression="sumCount([ARTICLE_NAME])" />
+          </ExpressionBindings>
+          <StylePriority Ref="37" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="38" ControlType="XRLabel" Name="xrLabel28" Multiline="true" Text="Ilość bagów [ szt ]:" TextAlignment="TopRight" SizeF="200.2916,23.00001" LocationFloat="0.6249666,77.33332" Font="Arial, 12pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="39" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="40" ControlType="XRLabel" Name="xrLabel27" Multiline="true" Text="xrLabel5" TextAlignment="TopLeft" SizeF="161.4584,22.99999" LocationFloat="200.9166,22.99999" Font="Arial, 12pt" Padding="2,2,0,0,100" Borders="None">
+          <Summary Ref="41" Running="Report" />
+          <ExpressionBindings>
+            <Item1 Ref="42" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([TARE])" />
+          </ExpressionBindings>
+          <StylePriority Ref="43" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="44" ControlType="XRLabel" Name="xrLabel26" Multiline="true" Text="Tara [ Kg ]:" TextAlignment="TopRight" SizeF="200.9166,22.99998" LocationFloat="0,22.99999" Font="Arial, 12pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="45" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="46" ControlType="XRLabel" Name="xrLabel25" Multiline="true" Text="xrLabel5" TextAlignment="TopLeft" SizeF="161.4583,23" LocationFloat="200.9166,45.99997" Font="Arial, 12pt" Padding="2,2,0,0,100" Borders="None">
+          <Summary Ref="47" Running="Report" />
+          <ExpressionBindings>
+            <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([MASSBRUTTO])" />
+          </ExpressionBindings>
+          <StylePriority Ref="49" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="50" ControlType="XRLabel" Name="xrLabel24" Multiline="true" Text="Waga brutto [ Kg ]:" TextAlignment="TopRight" SizeF="200.9165,23.00001" LocationFloat="0,45.99997" Font="Arial, 12pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="51" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="52" ControlType="XRLabel" Name="xrLabel23" Multiline="true" Text="Waga netto [ Kg ]:" TextAlignment="TopRight" SizeF="200.9166,23" LocationFloat="0,0" Font="Arial, 12pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="53" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="54" ControlType="XRLabel" Name="xrLabel22" Multiline="true" Text="xrLabel5" TextAlignment="TopLeft" SizeF="161.4584,23" LocationFloat="200.9166,0" Font="Arial, 12pt, style=Bold" ForeColor="Navy" Padding="2,2,0,0,100" Borders="None">
+          <Summary Ref="55" Running="Report" />
+          <ExpressionBindings>
+            <Item1 Ref="56" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([MASS])" />
+          </ExpressionBindings>
+          <StylePriority Ref="57" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+        </Item8>
+      </Controls>
+      <StylePriority Ref="58" UseBorders="false" />
+    </Item2>
+    <Item3 Ref="59" ControlType="DetailBand" Name="Detail" HeightF="23">
+      <Controls>
+        <Item1 Ref="60" ControlType="XRLabel" Name="xrLabel10" Multiline="true" Text="xrLabel10" TextAlignment="TopCenter" SizeF="100,23" LocationFloat="599.0001,0" Padding="2,2,0,0,100" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="61" EventName="BeforePrint" PropertyName="Text" Expression="[licznik_statystyka]" />
+          </ExpressionBindings>
+          <StylePriority Ref="62" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="63" ControlType="XRLabel" Name="xrLabel9" Multiline="true" Text="xrLabel9" TextAlignment="TopCenter" SizeF="100,23" LocationFloat="699,0" Padding="2,2,0,0,100" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="64" EventName="BeforePrint" PropertyName="Text" Expression="[licznik_wazen]" />
+          </ExpressionBindings>
+          <StylePriority Ref="65" UseBorders="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="66" ControlType="XRLabel" Name="xrLabel7" Multiline="true" Text="xrLabel7" TextAlignment="TopCenter" SizeF="100,23" LocationFloat="499,0" Padding="2,2,0,0,100" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="67" EventName="BeforePrint" PropertyName="Text" Expression="[MASSBRUTTO]" />
+          </ExpressionBindings>
+          <StylePriority Ref="68" UseBorders="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="69" ControlType="XRLabel" Name="xrLabel6" Multiline="true" Text="xrLabel6" TextAlignment="TopCenter" SizeF="100,23" LocationFloat="399,0" Padding="2,2,0,0,100" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="70" EventName="BeforePrint" PropertyName="Text" Expression="[TARE]" />
+          </ExpressionBindings>
+          <StylePriority Ref="71" UseBorders="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="72" ControlType="XRLabel" Name="xrLabel5" Multiline="true" Text="xrLabel5" TextAlignment="TopCenter" SizeF="100,23" LocationFloat="299,0" Padding="2,2,0,0,100" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="73" EventName="BeforePrint" PropertyName="Text" Expression="[MASS]" />
+          </ExpressionBindings>
+          <StylePriority Ref="74" UseBorders="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="75" ControlType="XRLabel" Name="xrLabel2" Multiline="true" Text="xrLabel2" TextAlignment="TopLeft" SizeF="235.4583,23" LocationFloat="63.54166,0" Padding="2,2,0,0,100" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="76" EventName="BeforePrint" PropertyName="Text" Expression="[ARTICLE_NAME]" />
+          </ExpressionBindings>
+          <StylePriority Ref="77" UseBorders="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="78" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="xrLabel1" TextAlignment="TopCenter" SizeF="63.54167,23" LocationFloat="0,0" Padding="2,2,0,0,100" Borders="None">
+          <ExpressionBindings>
+            <Item1 Ref="79" EventName="BeforePrint" PropertyName="Text" Expression="[id]" />
+          </ExpressionBindings>
+          <StylePriority Ref="80" UseBorders="false" UseTextAlignment="false" />
+        </Item7>
+      </Controls>
+    </Item3>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" />
+  </ComponentStorage>
+  <Watermarks>
+    <Item1 Ref="81" Id="Watermark1" />
+  </Watermarks>
+</XtraReportsLayoutSerializer>
