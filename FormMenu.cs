@@ -28,16 +28,16 @@ namespace RadwagE
             InitializeComponent();
             beiBalanceNameFilter.Enabled = false;
             beiCodeSeriesFilter.Enabled = false;
-         
+
 
         }
 
-        private async  void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        private async void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (cbRok.EditValue == null || cbMiesiac.EditValue == null)
             {
                 XtraMessageBox.Show("Uzupełnij pola: rok i miesiąc", "Komunikat", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              //  cbRok.Focus();
+                //  cbRok.Focus();
                 return;
             }
 
@@ -51,45 +51,51 @@ namespace RadwagE
                 using (var db = new E2REntities())
                 {
                     // Użycie asynchronicznego zapytania, aby nie blokować UI
-                    var wazenia = await(from n in db.RS_V_EW1_WAZENIA
-                                        where n.DATE.Year == rok && n.DATE.Month == miesiac // Poprawiona logika
-                                        orderby n.DATE ascending
-                                        select new Wazenia
-                                        {
-                                            id = n.id,
-                                            Date = n.DATE,
-                                            ARTICLE_NAME = n.ARTICLE_NAME,
-                                            BALANCE_NAME = n.BALANCE_NAME,
-                                            UNIT = n.UNIT,
-                                            CODE_SERIES = n.CODE_SERIES,
-                                            MASS = n.MASS,
-                                            MASSBRUTTO = n.MASSBRUTTO,
-                                            MASS_KG = n.MASS_KG,
-                                            TARE = n.TARE,
-                                            SCODE_ARTICLE = n.SCODE_ARTICLE,
-                                            kod_serii2 = n.kod_serii2,
-                                            archiwalne = n.archiwalne,
-                                            licznik_statystyka = n.licznik_statystyka,
-                                            licznik_wazen = n.licznik_wazen,
-                                            DZIEN = n.DATE.Day,
-                                            MIESIAC = n.DATE.Month,
-                                            ROK = n.DATE.Year,
-                                            COOPERATOR = n.COOPERATOR,
-                                            OPERATOR = n.OPERATOR,
+                    var wazenia = await (from n in db.RS_V_EW1_WAZENIA
+                                         where n.DATE.Year == rok && n.DATE.Month == miesiac // Poprawiona logika
+                                         orderby n.DATE ascending
+                                         select new Wazenia
+                                         {
+                                             id = n.id,
+                                             Date = n.DATE,
+                                             ARTICLE_NAME = n.ARTICLE_NAME,
+                                             BALANCE_NAME = n.BALANCE_NAME,
+                                             UNIT = n.UNIT,
+                                             CODE_SERIES = n.CODE_SERIES,
+                                             MASS = n.MASS,
+                                             MASSBRUTTO = n.MASSBRUTTO,
+                                             MASS_KG = n.MASS_KG,
+                                             TARE = n.TARE,
+                                             SCODE_ARTICLE = n.SCODE_ARTICLE,
+                                             kod_serii2 = n.kod_serii2,
+                                             archiwalne = n.archiwalne,
+                                             licznik_statystyka = n.licznik_statystyka,
+                                             licznik_wazen = n.licznik_wazen,
+                                             DZIEN = n.DATE.Day,
+                                             MIESIAC = n.DATE.Month,
+                                             ROK = n.DATE.Year,
+                                             COOPERATOR = n.COOPERATOR,
+                                             OPERATOR = n.OPERATOR,
 
-                                        }).ToListAsync(); // Asynchroniczne wykonanie zapytania
+                                         }).ToListAsync(); // Asynchroniczne wykonanie zapytania
 
                     gridControl1.DataSource = wazenia;
+
                     ConfigureGridColumns();
 
                     int liczbaRekordow = wazenia.Count;
-                 //  bsiLiczbaRekordow.Caption = $"Wczytano: {liczbaRekordow} wierszy";
+                    barStaticItemRecordCount.Caption = $"Wczytano: {liczbaRekordow} rekordów";
+                    gridView1.Columns["ARTICLE_NAME"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+                    gridView1.Columns["ARTICLE_NAME"].SummaryItem.DisplayFormat = "Ilość:{0:n0}";
+
+                    gridView1.Columns["MASS"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+                    gridView1.Columns["MASS"].SummaryItem.DisplayFormat = "Waga:{0:n2} kg";
                 }
             }
 
             catch (Exception ex)
             {
-               // bsiLiczbaRekordow.Caption = "Błąd podczas ładowania danych";
+                barStaticItemUser.Caption = "Błąd podczas ładowania danych";
                 // Zawsze pokazuj błąd!
                 XtraMessageBox.Show("Wystąpił błąd podczas pobierania danych: " + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -224,11 +230,14 @@ namespace RadwagE
                 XtraMessageBox.Show("Wystąpił błąd podczas generowania raportu:\n" + ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            //.Caption =  bsiZalogowanyUzytkownik.Caption = "Użytkownik: Niezalogowany";
+            // barStaticItemUser.Caption = "Użytkownik: Niezalogowany";
+            barStaticItemRecordCount.Caption = "Wczytano: 0 wierszy";
+            barStaticItem1.Caption = "Użytkownik: Niezalogowany";
         }
 
         private void btnCzechy_ItemClick(object sender, ItemClickEventArgs e)
@@ -284,7 +293,7 @@ namespace RadwagE
 
 
                 gridView1.Columns["MASS_KG"].Caption = "Masa [kg]";
-              
+
 
                 gridView1.Columns["TARE"].VisibleIndex = 6;
                 gridView1.Columns["TARE"].Caption = "Tara";
@@ -366,5 +375,15 @@ namespace RadwagE
             }
 
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (gridControl1.MainView is DevExpress.XtraGrid.Views.Grid.GridView gridView)
+            {
+                // Jeśli tak, rzutuj i wywołaj metodę
+                gridView.ClearColumnsFilter();
+            }
+        }
+
     }
-    }
+}

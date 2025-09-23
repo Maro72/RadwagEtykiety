@@ -64,8 +64,8 @@
             this.rgAutentykacja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rgAutentykacja.Name = "rgAutentykacja";
             this.rgAutentykacja.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Autentykacja Windows"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Autentykacja SQL Server")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Autoryzacja Windows"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Autoryzacja SQL Server")});
             this.rgAutentykacja.Size = new System.Drawing.Size(159, 91);
             this.rgAutentykacja.TabIndex = 1;
             // 
